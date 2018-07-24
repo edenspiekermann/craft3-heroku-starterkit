@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Welcome to Craft CMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <style>
+        html,
+        body {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+            height: 100%;
+            font-family: system-ui, BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: hsl(212, 10%, 93%);
+            color: hsl(212, 20%, 20%);
+            display: flex;
+        }
+
+        p {
+            line-height: 1.4em;
+            margin-bottom: 1.4em;
+        }
+
+        ul {
+            line-height: 1.3em;
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        ul li {
+            margin-bottom: 0.35em;
+        }
+
+        a {
+            color: #0d78f2;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        img {
+          display: inline-block;
+          max-width: 600px;
+          width: 100%;
+        }
+
+        .content {
+          text-align: center;
+        }
+        .container {
+          width: 100%; 
+        }
+    </style>
+</head>
+<body class="ltr">
+<div class="container">
+    <div id="modal">
+        <div id="main">
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

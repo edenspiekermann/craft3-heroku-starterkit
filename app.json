@@ -1,0 +1,26 @@
+{
+  "name": "Craft Heroku Test Project",
+  "description": "A boilerplate to have a quick start with a Craft3 project + hosting",
+  "repository": "https://github.com/dsteinel/craft-heroku-test-project",
+  "keywords": ["craftcms"],
+  "env": {
+    "ENVIRONMENT": {
+      "description": "The environment should be 'dev' or 'production'. If you ask me, I'd go with 'dev' to have some debug tools.",
+      "value": "dev"
+    },
+    "SECURITY_KEY": {
+      "description": "Craft needs a random security key. Just click in the input field below and roll with your head over your keyboard. Make sure that the field is filled in with at least 8 digits.",
+      "value": "1u0q3ywaiofshk21qs"
+    }
+  },
+  "addons": [
+    {
+      "plan": "jawsdb-maria:kitefin"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-php"
+    }
+  ]
+}
