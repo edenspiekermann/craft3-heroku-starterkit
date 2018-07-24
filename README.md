@@ -1,1 +1,0 @@
-# craft-heroku-boilerplate
