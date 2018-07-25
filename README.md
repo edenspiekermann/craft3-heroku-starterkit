@@ -5,6 +5,7 @@
 * Add Espi JS/CSS guidelines + link to wiki
 * Add basic/example webpack file
 * Create a nice - espi style - workflow
+* Free plan is not always enough (DB)
 
 This repository is a boilerplate with which you can install Craft 3 locally and on Heroku as well. 
 
