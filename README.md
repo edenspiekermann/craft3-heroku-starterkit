@@ -1,14 +1,21 @@
 # Craft 3 Boilerplate
+!! Work in progress — Feel free to try !!
+
+### Still to do
+* Add Espi JS/CSS guidelines + link to wiki
+* Add basic/example webpack file
+* Create a nice - espi style - workflow
+
 This repository is a boilerplate with which you can install Craft 3 locally and on Heroku as well. 
 
 ### Just want to give it a quick try?
 Click this button and direktly deploy this repository to a new instance on your Heroku account. 
 
-Go ahead and try:
+Go ahead and try:<br>
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/dsteinel/craft-heroku-test-project/tree/master)
 
 After the intall process, visit the URL of your app and add `/admin/install` to it:
-`https://HERE-GOES-YOUR-URL.herokuapp.com/admin/install`
+<br>`https://HERE-GOES-YOUR-URL.herokuapp.com/admin/install`
 
 Fill out all details and you are good to go!
 
@@ -135,7 +142,7 @@ If the page is still under construction, it is a good idea to password protect i
 6. Volume Type must be `Cloudinary`
 7. Now fill in the Cloudinary credentials
 8. Go to the Assets and upload the first image
-9. 
+
 ### Give the team access
 * give everybody heroku access and richard bausek and michael boerner
 * transfer the account to either CI_bot (if you can run on a free plan) or michael boerner's account (if you need to have paid plugins or a paid heroku plan)
