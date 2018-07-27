@@ -54,8 +54,8 @@ $ composer install
 * Softly but confident vocalize the word "Shaka"
 * Now let's start coding 🎈
 
-
 #### Optional: Deploy to Heroku
+This step is optional. If you want to deploy the project to Heroku then read on. If you only want to work locally, skip the section and jump to [Start working with the project](#start-working-with-the-project).
 To make your repository work on Heroku, we first have to update the reference URL with your freshly created repository.
 Heroku reads all the deploy details from the [app.json](https://devcenter.heroku.com/articles/app-json-schema) file. So we need to go there and replace the `"repository"` URL with your repository URL. Push the changed `app.json` and go to the Heroku deploy URL: 
 https://heroku.com/deploy?template=https://github.com/dsteinel/test/tree/master
@@ -72,6 +72,39 @@ Depending on the traffic, you also may have to upgrade the Heroku servers to a p
 ##### Optional: Heroku Post install
 After the deployment process is successful, go to your new created website and add `/admin/install` to the URL. Craft will help you to make the setup complete.
 ![Craft CMS install screen](https://res.cloudinary.com/dsteinel/image/upload/v1532511530/Screen_Shot_2018-07-25_at_11.36.45.png)
+
+### Start working with the project
+* Use the recommended node version with `nvm use`
+* Install all dependencies with `yarn install`
+* Start MAMP
+* Run `yarn watch` from the Terminal. This will start a webserver and proxy port :8888 (MAMP) to :3000 (webpack)
+* Go to `localhost:3000` and enjoy hot reloading
+* If you want to make the bundle production ready, do `yarn build`
+
+## ESPI Guidelines
+Read [here](https://edenspiekermann.atlassian.net/wiki/spaces/DEV/pages/498663716/Guidelines) for more information on the ESPI CSS and JS Guidelines.
+
+#### JS
+We are using Semistandard as our JavaScript style guide.
+To make sure we all write in the same manor, we lint our code with eslint.
+
+#### CSS
+[Sass Guidelines](http://sass-guidelin.es/) are the way we write our CSS.
+To enforce consistency, we use the tool [stylelint](https://stylelint.io/) with the configuration from sass-guidelines which you can find in the `.stylelintrc` file.
+
+#### Workflow
+* Start the webserver and watch JS and SCSS files with `yarn watch`
+* `postinstall` is mainly for Heroku, after the installing the dependencies
+* Lint all JS files with `yarn run lint:js`
+* Lint all SCSS files with `yarn run lint:styles`
+* If you want to fix some easy js linting errors, go with `yarn run lint:js:fix`. This will fix for example double quote to single.
+* `precommit` is the default task which runs before commiting. If this task fails, you can not commit
+* `watch` runs the webserver on `localhost:3000` and has a hot reload on JS and SCSS files
+* `build` bundles all JS and SCSS files and minifies the. Output path is the main Craft folder, `/web/`
+
+#### Webpack
+All webpack settings for development are in the `webpack.dev.config.js`. There is no minification/uglify of the code.
+All webpack settings  for production are in the `webpack.prod.config.js`. A minified JS and CSS file will be generated.
 
 ### Important notice
 #### Folder Structure
@@ -95,6 +128,10 @@ After the deployment process is successful, go to your new created website and a
 #### Database
 If you want to develop locally, I can highly recommend you to use a local database, otherwise the website will be quite slow.
 To change the database, head over to you `.env` variable, change the value of `JAWSDB_MARIA_URL` and restart the server.
+
+#### Give the team access
+* give everybody heroku access and richard bausek and michael boerner
+* transfer the account to either CI_bot (if you can run on a free plan) or michael boerner's account (if you need to have paid plugins or a paid heroku plan)
 
 #### Procfile
 Craft has its main folder not in the root directory (in this project it is the `web` folder), so we need to do some adjustments on the Heroku web server settings. Heroku provides optional configurations in the [Procfile](https://devcenter.heroku.com/articles/deploying-php#the-procfile). 
@@ -145,12 +182,3 @@ If the page is still under construction, it is a good idea to password protect i
 6. Volume Type must be `Cloudinary`
 7. Now fill in the Cloudinary credentials
 8. Go to the Assets and upload the first image
-
-### Give the team access
-* give everybody heroku access and richard bausek and michael boerner
-* transfer the account to either CI_bot (if you can run on a free plan) or michael boerner's account (if you need to have paid plugins or a paid heroku plan)
-
-### Still to do
-* Add Espi JS/CSS guidelines + link to wiki
-* Add basic/example webpack file
-* Create a nice - espi style - workflow

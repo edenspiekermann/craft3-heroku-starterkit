@@ -11,6 +11,8 @@
 /web/assets/*
 /web/cpresources/*
 /web/cache/
+/web/js/*
+/web/css/*
 
 # BUILD FILES
 /bower_components/*

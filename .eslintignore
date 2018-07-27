@@ -1,0 +1,6 @@
+node_modules/
+web/
+.stylelintrc.js
+.eslintrc.js
+webpack.prod.config.js
+webpack.dev.config.js
