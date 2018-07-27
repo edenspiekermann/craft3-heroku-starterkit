@@ -1,15 +1,7 @@
 # Craft 3 Boilerplate
-!! Work in progress — Feel free to try !!
+This repository is a boilerplate with which you can install Craft 3 locally and on Heroku as well. It has some Plugins already preinstalled, so you don't have to take care of the basics.
 
-### Still to do
-* Add Espi JS/CSS guidelines + link to wiki
-* Add basic/example webpack file
-* Create a nice - espi style - workflow
-* Free plan is not always enough (DB)
-
-This repository is a boilerplate with which you can install Craft 3 locally and on Heroku as well. 
-
-### Just want to give it a quick try?
+## Just want to give it a quick try?
 Click this button and direktly deploy this repository to a new instance on your Heroku account. 
 
 Go ahead and try:<br>
@@ -43,21 +35,9 @@ $ git push --set-upstream origin master
 ```
 **Make sure you create an empty git repository (no `.git` or `README.md` or similar)***
 
-#### Deploy to Heroku
-To make your repository work on Heroku, we first have to update the reference URL with your freshly created repository.
-Heroku reads all the deploy details from the [app.json](https://devcenter.heroku.com/articles/app-json-schema) file. So we need to go there and replace the `"repository"` URL with your repository URL. Push the changed `app.json` and go to the Heroku deploy URL: 
-https://heroku.com/deploy?template=https://github.com/dsteinel/test/tree/master
+### Use it
 
-for example: `https://heroku.com/deploy?template=https://github.com/dsteinel/craft-heroku-test-project/tree/master`
-
-You will see a Heroku page for creating a new instance. Please fill out all the details and don't forget to choose the region. If you are in Europe, please use Europe and US if you are in the US or nearby. If you chose the wrong region, it could be that your website is slower than it could be.
-![Heroku create new app screen](https://res.cloudinary.com/dsteinel/image/upload/v1532511156/Screen_Shot_2018-07-25_at_11.32.07.png)
-
-#### Post install
-After the deployment process is successful, go to your new created website and add `/admin/install` to the URL. Craft will help you to make the setup complete.
-![Craft CMS install screen](https://res.cloudinary.com/dsteinel/image/upload/v1532511530/Screen_Shot_2018-07-25_at_11.36.45.png)
-
-#### Use it locally
+#### Locally
 * Create a `.env` file in the root of your project
 * Copy over all dummy content from `.env.example`. These are all the details Craft needs for installation.
 * Install all dependencies
@@ -74,11 +54,33 @@ $ composer install
 * Softly but confident vocalize the word "Shaka"
 * Now let's start coding 🎈
 
+
+#### Optional: Deploy to Heroku
+To make your repository work on Heroku, we first have to update the reference URL with your freshly created repository.
+Heroku reads all the deploy details from the [app.json](https://devcenter.heroku.com/articles/app-json-schema) file. So we need to go there and replace the `"repository"` URL with your repository URL. Push the changed `app.json` and go to the Heroku deploy URL: 
+https://heroku.com/deploy?template=https://github.com/dsteinel/test/tree/master
+
+for example: `https://heroku.com/deploy?template=https://github.com/dsteinel/craft-heroku-test-project/tree/master`
+
+You will see a Heroku page for creating a new instance. Please fill out all the details and don't forget to choose the region. If you are in Europe, please use Europe and US if you are in the US or nearby. If you chose the wrong region, it could be that your website is slower than it could be.
+![Heroku create new app screen](https://res.cloudinary.com/dsteinel/image/upload/v1532511156/Screen_Shot_2018-07-25_at_11.32.07.png)
+
+If you have multiple Users, it is recommended, that you upgrade at least the database to a paid plan. It can happen, that the `max_connections` of the free database plan is used up, when you had too much database traffic. This means, that you can not access the website anymore (Error 500 on both, local environment and Heroku as well) and you have to upgrade the database plan.
+
+Depending on the traffic, you also may have to upgrade the Heroku servers to a paid plan.
+
+##### Optional: Heroku Post install
+After the deployment process is successful, go to your new created website and add `/admin/install` to the URL. Craft will help you to make the setup complete.
+![Craft CMS install screen](https://res.cloudinary.com/dsteinel/image/upload/v1532511530/Screen_Shot_2018-07-25_at_11.36.45.png)
+
 ### Important notice
 #### Folder Structure
 ```js
 |--config ⭐           // Here are the basic configs for CraftCMS ([read more here](https://craftcms.com/docs/folder-structure))
 |--modules             // Holds any [Yii modules](https://www.yiiframework.com/doc/guide/2.0/en/structure-modules) your site might be using.
+|--src ⭐              // Asset folder for styling and scripting
+|  |--js               // All the .js files
+|  |--scss             // All the .scss files
 |--storage             // This is where Craft stores a bunch of files that get dynamically saved during use.[read more here](https://docs.craftcms.com/v3/directory-structure.html)
 |  |--logs             // Stores Craft’s logs and PHP error logs.
 |  |--rebrand          // Stores the custom Login Page Logo and Site Icon files, if you’ve uploaded them.
@@ -147,3 +149,8 @@ If the page is still under construction, it is a good idea to password protect i
 ### Give the team access
 * give everybody heroku access and richard bausek and michael boerner
 * transfer the account to either CI_bot (if you can run on a free plan) or michael boerner's account (if you need to have paid plugins or a paid heroku plan)
+
+### Still to do
+* Add Espi JS/CSS guidelines + link to wiki
+* Add basic/example webpack file
+* Create a nice - espi style - workflow
