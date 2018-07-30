@@ -17,4 +17,5 @@ return array(
   'password' => $dbparts['pass'],
   'database' => ltrim($dbparts['path'],'/'),
   'tablePrefix' => 'craft',
+  'port' => $dbparts['port'],
 );
