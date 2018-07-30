@@ -2,12 +2,12 @@
 This repository is a boilerplate with which you can install Craft 3 locally and on Heroku as well. It has some Plugins already preinstalled, so you don't have to take care of the basics.
 
 ## Just want to give it a quick try?
-Click this button and direktly deploy this repository to a new instance on your Heroku account. 
+Click this button and directly deploy this repository to a new instance on your Heroku account. 
 
 Go ahead and try:<br>
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/dsteinel/craft-heroku-test-project/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/edenspiekermann/craft-heroku-boilerplate/tree/master)
 
-After the intall process, visit the URL of your app and add `/admin/install` to it:
+After the install process, visit the URL of your app and add `/admin/install` to it:
 <br>`https://HERE-GOES-YOUR-URL.herokuapp.com/admin/install`
 
 Fill out all details and you are good to go!
@@ -51,7 +51,7 @@ $ composer install
 * With your right hand, make a fist (not a tight one) 
 * Smoothly extend both your pinky and your thumb
 * Lightly shake your hand (too fast makes you like a tourist, and too slow make you look stupid)
-* Softly but confident vocalize the word "Shaka"
+* Softly but confident vocalise the word "Shaka"
 * Now let's start coding 🎈
 
 #### Optional: Deploy to Heroku
