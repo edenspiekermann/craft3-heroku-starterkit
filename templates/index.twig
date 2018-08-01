@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>Welcome to Craft CMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <style>
+        html,
+        body {
+          font-size: 20px;
+          -webkit-text-size-adjust: 100%;
+          height: 100%;
+          font-family: system-ui, BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+          padding: 0;
+          background-color: #F5F5F5;
+          color: #333;
+          text-align: center;
+        }
+
+        h1 {
+          margin-top: 0;
+          margin-bottom: 1.4em;
+        }
+
+        p {
+          line-height: 1.4em;
+          margin-bottom: 1.4em;
+        }
+
+        ul {
+          line-height: 1.35em;
+          list-style-type: none;
+          max-width: 600px;
+          width: 100%;
+        }
+
+        ul li {
+          margin-bottom: 0.5em;
+          text-align: left;
+        }
+
+        a {
+          color: #0D78F2;
+          text-decoration: none;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+
+        strong {
+          color: #ACD828;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 You made it!</h1>
+    <ul>
+      {% if currentUser %}<li>User: {{ currentUser.friendlyName }}</li>{% endif %}
+      <li>Your Site Url is: {{ siteUrl }}</li>
+      <li>Your Site Name is: {{ siteName }}</li>
+      <li>Today is {{ now|date('M j, Y') }}</li>
+      {% if craft.config.devMode %}
+        <li>Your are in <strong>dev</strong> environment</li>
+      {% else %}
+        <li>Dev environment is <strong>not active</strong></li>
+      {% endif %}
+    </ul>
+  </div>
+</body>
+</html>
