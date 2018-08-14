@@ -1,7 +1,7 @@
 {
-  "name": "zdf-gemaelde",
+  "name": "craft3-heroku-starterkit",
   "version": "0.0.1",
-  "description": "",
+  "description": "This is a starter kit for Craft3 CMS. It helps to install the project on Heroku easily.",
   "author": "ESPI Berlin",
   "private": true,
   "engines": {

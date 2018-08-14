@@ -81,9 +81,14 @@ After the deployment process is successful, go to your new created website and a
 * Go to `localhost:3000` and enjoy hot reloading
 * If you want to make the bundle production ready, do `yarn build`
 
-## ESPI Guidelines
-Read [here](https://edenspiekermann.atlassian.net/wiki/spaces/DEV/pages/498663716/Guidelines) for more information on the ESPI CSS and JS Guidelines.
+All bundled files will live in the `web` folder. I would recommend to not change the name of the folder. 
+If you feel like changing it, please read the [Docs](https://docs.craftcms.com/v3/directory-structure.html#web) and don't forget to change the folder path after the bootscript in the `Procfile` as wella s in the webpack files.
 
+
+## Additional content
+**You can safely skip that part if you are not interested in CSS and JS guidelines.**
+
+### Guidelines
 #### JS
 We are using Semistandard as our JavaScript style guide.
 To make sure we all write in the same manor, we lint our code with eslint.
@@ -94,7 +99,7 @@ To enforce consistency, we use the tool [stylelint](https://stylelint.io/) with 
 
 #### Workflow
 * Start the webserver and watch JS and SCSS files with `yarn watch`
-* `postinstall` is mainly for Heroku, after the installing the dependencies
+* The `postinstall` task is mainly for Heroku, after the installing the dependencies
 * Lint all JS files with `yarn run lint:js`
 * Lint all SCSS files with `yarn run lint:styles`
 * If you want to fix some easy js linting errors, go with `yarn run lint:js:fix`. This will fix for example double quote to single.
@@ -129,16 +134,9 @@ All webpack settings  for production are in the `webpack.prod.config.js`. A mini
 If you want to develop locally, I can highly recommend you to use a local database, otherwise the website will be quite slow.
 To change the database, head over to you `.env` variable, change the value of `JAWSDB_MARIA_URL` and restart the server.
 
-#### Give the team access
-* give everybody heroku access and richard bausek and michael boerner
-* transfer the account to either CI_bot (if you can run on a free plan) or michael boerner's account (if you need to have paid plugins or a paid heroku plan)
-
 #### Procfile
 Craft has its main folder not in the root directory (in this project it is the `web` folder), so we need to do some adjustments on the Heroku web server settings. Heroku provides optional configurations in the [Procfile](https://devcenter.heroku.com/articles/deploying-php#the-procfile). 
 In this project we need to start an Nginx as a web server and make `web` the root diretory of the server.
-
-I would recommend to not change the name of the `web` folder. 
-If you feel like changing it, please read the [Docs](https://docs.craftcms.com/v3/directory-structure.html#web) and don't forget to change the folder path after the bootscript in the `Procfile`.
 
 ## Database
 This project is using MariaDB instead of MySQL. MariaDB is a complete drop-in-replacement for MySQL. If you need to migrate some datas, you should not have problems here. If you do, you can change the database connection at any time in the Heroku interface by replacing the `JAWSDB_MARIA_URL` URL with your database URL (`settings --> config vars`).
