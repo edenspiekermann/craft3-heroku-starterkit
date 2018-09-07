@@ -54,6 +54,12 @@ $ composer install
 * Softly but confident vocalise the word "Shaka"
 * Now let's start coding 🎈
 
+##### Known Issue with PHP on OSX
+I would recommend using php with [homebrew](https://brew.sh/index_de).
+Install a specific php version with brew. For example: `brew install php@7.1`. Like this you will be also able to install packages with PECL. To switch between PHP Versions, a very nice helper is the **php switcher** which is described [here](https://getgrav.org/blog/macos-sierra-apache-multiple-php-versions). Jump to the section: "PHP Switcher Script" and instsall it. 
+If you encounter an issue during the install process with pkg-config, install it with homebrew: `brew install pkg-config`. 
+Now you can install imagemagick with PECL as well: `pecl install imagick`, which is the recommended way to have it native with your php version.
+
 #### Optional: Deploy to Heroku
 This step is optional. If you want to deploy the project to Heroku then read on. If you only want to work locally, skip the section and jump to [Start working with the project](#start-working-with-the-project).
 To make your repository work on Heroku, we first have to update the reference URL with your freshly created repository.
