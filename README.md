@@ -58,9 +58,9 @@ $ composer install
 This step is optional. If you want to deploy the project to Heroku then read on. If you only want to work locally, skip the section and jump to [Start working with the project](#start-working-with-the-project).
 To make your repository work on Heroku, we first have to update the reference URL with your freshly created repository.
 Heroku reads all the deploy details from the [app.json](https://devcenter.heroku.com/articles/app-json-schema) file. So we need to go there and replace the `"repository"` URL with your repository URL. Push the changed `app.json` and go to the Heroku deploy URL: 
-https://heroku.com/deploy?template=https://github.com/dsteinel/test/tree/master
+https://heroku.com/deploy?template=https://github.com/edenspiekermann/craft3-heroku-starterkit/tree/master
 
-for example: `https://heroku.com/deploy?template=https://github.com/dsteinel/craft-heroku-test-project/tree/master`
+for example: `https://heroku.com/deploy?template=https://github.com/edenspiekermann/craft3-heroku-starterkit/tree/master`
 
 You will see a Heroku page for creating a new instance. Please fill out all the details and don't forget to choose the region. If you are in Europe, please use Europe and US if you are in the US or nearby. If you chose the wrong region, it could be that your website is slower than it could be.
 ![Heroku create new app screen](https://res.cloudinary.com/dsteinel/image/upload/v1532511156/Screen_Shot_2018-07-25_at_11.32.07.png)
