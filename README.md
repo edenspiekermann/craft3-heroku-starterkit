@@ -74,7 +74,7 @@ After the deployment process is successful, go to your new created website and a
 ![Craft CMS install screen](https://res.cloudinary.com/dsteinel/image/upload/v1532511530/Screen_Shot_2018-07-25_at_11.36.45.png)
 
 ### Start working with the project
-* Use the recommended node version with `nvm use`
+* Use the recommended node version with `nvm use` ([read more](https://github.com/creationix/nvm))
 * Install all dependencies with `yarn install`
 * Start MAMP
 * Run `yarn watch` from the Terminal. This will start a webserver and proxy port :8888 (MAMP) to :3000 (webpack)
