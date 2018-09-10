@@ -9,8 +9,8 @@
       "value": "dev"
     },
     "SECURITY_KEY": {
-      "description": "Craft needs a random security key. Just click in the input field below and roll with your head over your keyboard. Make sure that the field is filled in with at least 8 digits.",
-      "value": "1u0q3ywaiofshk21qs"
+      "description": "Craft needs a random security key.",
+      "generator": "secret"
     }
   },
   "addons": [
