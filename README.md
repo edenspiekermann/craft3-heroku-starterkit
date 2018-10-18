@@ -18,11 +18,6 @@ Fill out all details and you are good to go!
 $ git clone git@github.com:edenspiekermann/craft-heroku-boilerplate.git
 ```
 
-#### Rename the folder
-```bash 
-$ mv craft-heroku-boilerplate craft-heroku-boilerplate
-```
-
 #### Connect with your own Git Repo
 ```bash
 $ cd craft-heroku-boilerplate
